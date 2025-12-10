@@ -2,84 +2,403 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f9fafb;
-  color: #222;
-  line-height: 1.6;
+    /* Changed to Inter which is a clean, modern tech font */
+    font-family: "Inter", "Poppins", sans-serif;
+    background-color: #f9fafb;
+    color: #222;
+    line-height: 1.7; /* Increased line height for better readability */
 }
 
-.container { width: 90%; max-width: 1100px; margin: auto; }
+.container { 
+    width: 90%; 
+    max-width: 1100px; 
+    margin: auto; 
+}
+
+/* --- Global Elements & Typography --- */
+.btn {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.section-title {
+    font-size: 2.5rem; 
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #001f3f; /* Darker blue for heading */
+    /* Added visual structure to the title */
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #00bcd4;
+}
 
 /* Navbar */
 .navbar {
-  background: #0a0a23;
-  color: #fff;
-  padding: 1rem 0;
+    background: #0a0a23;
+    color: #fff;
+    padding: 1rem 0;
+    /* Added subtle shadow to the top bar */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 100;
 }
 .nav-content {
-  display: flex; justify-content: space-between; align-items: center;
+    display: flex; justify-content: space-between; align-items: center;
 }
 .logo {
-  display: flex; align-items: center; gap: 10px;
+    display: flex; align-items: center; gap: 10px;
 }
 .logo img {
-  width: 40px; height: 40px;
+    width: 40px; height: 40px;
 }
 .navbar nav a {
-  color: #fff; text-decoration: none; margin: 0 10px;
-  transition: 0.3s;
+    color: #fff; text-decoration: none; margin: 0 12px;
+    transition: 0.3s;
+    font-weight: 500;
 }
-.navbar nav a:hover { color: #00bcd4; }
+.navbar nav a:hover { 
+    color: #00bcd4; 
+}
+.nav-button {
+    /* Style the Contact Us button prominently */
+    background: #00bcd4;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left: 20px !important;
+}
+.nav-button:hover {
+    background: #0288a7;
+}
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #001f3f, #0074d9);
-  color: #fff;
-  text-align: center;
-  padding: 5rem 1rem;
+    /* Updated gradient for modern look */
+    background: linear-gradient(135deg, #001f3f, #0074d9);
+    color: #fff;
+    text-align: center;
+    padding: 8rem 1rem; /* Increased padding */
 }
 .hero-content h2 {
-  font-size: 2rem; margin-bottom: 1rem;
+    font-size: 2.8rem; /* Larger font size */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+.highlight-text {
+    color: #00bcd4;
+    font-weight: 700;
 }
 .hero .btn {
-  display: inline-block; background: #00bcd4; color: #fff;
-  padding: 10px 20px; text-decoration: none; border-radius: 5px;
-  margin-top: 20px; transition: 0.3s;
+    display: inline-block; background: #00bcd4; color: #fff;
+    padding: 12px 30px; /* Larger button */
+    text-decoration: none; border-radius: 50px; /* Pill shape */
+    margin-top: 30px; transition: 0.3s;
 }
-.hero .btn:hover { background: #0288a7; }
+.hero .btn:hover { 
+    background: #0288a7; 
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
 
-/* About */
-.about { padding: 3rem 1rem; background: #fff; text-align: center; }
-.about h2 { color: #0074d9; margin-bottom: 1rem; }
+/* About Section */
+.about { padding: 5rem 1rem; background: #fff; } /* Increased padding */
+.about h2 { color: #0074d9; margin-bottom: 2rem; }
+
+/* Added content-split styles */
+.content-split {
+    display: flex;
+    gap: 40px;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+.mission-statement {
+    flex: 1;
+    padding: 2rem;
+    background: #eef7ff; /* Light accent background */
+    border-left: 4px solid #0074d9;
+    border-radius: 5px;
+}
+.about-text {
+    flex: 1.5;
+    padding-top: 1rem;
+}
+.secondary-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #0074d9;
+    color: #0074d9;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+.secondary-btn:hover {
+    background: #0074d9;
+    color: #fff;
+}
+
 
 /* Services */
 .services {
-  background: #f0f4f8;
-  padding: 3rem 1rem;
-  text-align: center;
+    background: #f0f4f8;
+    padding: 5rem 1rem; /* Increased padding */
+    text-align: center;
 }
-.services h2 { color: #0074d9; margin-bottom: 2rem; }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+.services h2 { color: #0074d9; margin-bottom: 3rem; }
+.card-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
-.card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  transition: 0.3s;
+.division-card {
+    background: #fff;
+    border-radius: 12px; /* Smoother corners */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Smoother shadow */
+    padding: 2rem;
+    transition: 0.3s;
+    border-bottom: 5px solid #00bcd4; /* Brand color feature line */
 }
-.card:hover { transform: translateY(-5px); }
-.card h3 { margin-bottom: 1rem; color: #0a0a23; }
+.division-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.card-icon {
+    font-size: 3rem; 
+    display: block; 
+    margin-bottom: 0.5rem;
+}
+.division-card h3 { 
+    margin-bottom: 0.5rem; 
+    color: #0a0a23; 
+    line-height: 1.2;
+}
+.product-name {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 400;
+}
+.card-link {
+    display: block;
+    margin-top: 1rem;
+    color: #0074d9;
+    font-weight: 600;
+}
+
+/* Products/Featured Projects */
+.products {
+    padding: 5rem 1rem;
+    background: #fff;
+}
+
+/* --- FIX 1: Project Showcase Alignment (from previous analysis) --- */
+.project-showcase {
+    /* Use CSS Grid to center and control card width */
+    display: grid;
+    /* Allows flexibility for multiple cards, max width 600px for single card visibility */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 600px)); 
+    gap: 1.5rem; 
+    margin-top: 2rem;
+    
+    /* IMPORTANT: Center the grid itself within the container */
+    justify-content: center; 
+}
+
+.project-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    /* Used the same shadow style as the division cards for consistency */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+    text-align: left; 
+    border-top: 4px solid #0074d9; 
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+.project-card h4 {
+    color: #0074d9;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
 
 /* Footer */
 .footer {
-  background: #0a0a23;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
+    background: #0a0a23;
+    color: #fff;
+    padding: 4rem 1rem 1.5rem; /* More top padding */
+    text-align: left; /* Aligns content inside grid columns */
 }
-.footer a { color: #00bcd4; text-decoration: none; }
-.footer .copy { margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; }
+
+/* --- Footer Grid Definition --- */
+.footer-grid {
+    display: grid;
+    /* 3 columns: 2/5ths for contact, 1/5th for links, 2/5ths for signup */
+    grid-template-columns: 2fr 1fr 2fr; 
+    gap: 40px;
+    margin-bottom: 1.5rem;
+}
+.footer-col {
+    /* Base padding for columns */
+    padding-bottom: 1rem;
+}
+.footer-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #00bcd4;
+}
+
+.footer a { 
+    color: #00bcd4; 
+    text-decoration: none; 
+    transition: 0.3s;
+}
+.footer a:hover { 
+    color: #fff; 
+    text-decoration: underline; 
+}
+
+/* --- FIX 2: Quick Links List Alignment (from previous analysis) --- */
+.footer-col.quick-links ul {
+    list-style: none; 
+    padding: 0; 
+    margin-top: 0.5rem;
+}
+
+.footer-col.quick-links li a {
+    display: block; 
+    padding: 0.3rem 0;
+    transition: color 0.2s;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    grid-column: 1 / -1; /* Forces the element to span all columns */
+    border-top: 1px solid rgba(255, 255, 255, 0.15); 
+    padding-top: 1.5rem; 
+    text-align: center;
+}
+.footer .copy { 
+    margin-top: 0; 
+    font-size: 0.9rem; 
+    opacity: 0.7; 
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .content-split {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mission-statement, .about-text {
+        padding: 1rem;
+    }
+    .mission-statement {
+        order: -1; /* Puts mission statement first on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar nav {
+        display: none; /* Hide standard nav links */
+    }
+    .nav-content {
+        justify-content: center;
+    }
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    /* Collapse Footer to single column */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer-col.contact-info ul {
+        text-align: center;
+        list-style-type: none;
+    }
+    /* Realign quick links back to center on mobile */
+    .footer-col.quick-links ul {
+        text-align: center;
+    }
+}
+
+/* --- New Styles for IoT Flow Chart (How It Works Section) --- */
+.flow-chart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 15px;
+    margin-top: 3rem;
+}
+
+.flow-step {
+    flex: 0 0 auto; /* Prevents steps from stretching */
+    width: 150px; /* Fixed width for consistent look */
+    padding: 15px;
+    background: #eef7ff; /* Light blue background */
+    border: 1px solid #0074d9;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.flow-step:hover {
+    background: #e0f0ff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 116, 217, 0.1);
+}
+
+.flow-step h4 {
+    color: #001f3f;
+    margin: 5px 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.flow-step p {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.3;
+}
+
+.step-icon {
+    font-size: 2rem;
+    display: block;
+    line-height: 1;
+}
+
+.flow-arrow {
+    font-size: 2rem;
+    color: #0074d9;
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+.flow-step.final-step {
+    border-color: #00bcd4; /* Final step highlight */
+}
+
+/* Responsive adjustment for small screens: stack the items vertically */
+@media (max-width: 650px) {
+    .flow-chart-wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+    .flow-step {
+        width: 100%; /* Full width when stacked */
+        margin: 10px 0;
+    }
+    .flow-arrow {
+        transform: rotate(90deg); /* Turn arrow vertical */
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+}
