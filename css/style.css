@@ -573,3 +573,5 @@ body { color: var(--ink); background: #fff; }
 .brand-name small { display:block; margin-top:.2rem; color:#a7bad2; font-size:.68rem; font-weight:500; letter-spacing:.08em; text-transform:uppercase; }
 .logo:focus-visible { outline:2px solid #50e0d0; outline-offset:4px; border-radius:4px; }
 @media (max-width:680px) { .logo-box { width:44px; height:44px; }.logo-box img { width:66px; height:44px; }.brand-name { font-size:.86rem; } }
+.logo-box { border-color:rgba(72,223,220,.48); background:#020609; box-shadow:0 0 16px rgba(45,216,220,.2),inset 0 0 12px rgba(45,216,220,.08); }
+.logo-box img { width:100%; max-width:100%; height:100%; border-radius:11px; object-fit:cover; filter:none; }
