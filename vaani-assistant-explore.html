@@ -8,18 +8,13 @@
     
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> 
-    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="icon" href="images/vsw-monogram-transparent.png" type="image/png" />
 </head>
-<body>
+<body class="vaani-page">
     
     <header class="navbar sticky-header">
         <div class="container nav-content">
-            <div class="logo">
-                <div class="logo-box">
-                    <img src="images/logo.png" alt="VSW Logo" />
-                </div>
-                <h1>Veda Shakti Ware <span class="long-name">Pvt. Ltd.</span></h1>
-            </div>
+            <a class="logo" href="index.html" aria-label="Veda Shakti Ware home"><span class="logo-box"><img src="images/vsw-monogram-transparent.png" alt="" /></span><span class="brand-name">Veda Shakti Ware <small>Private Limited</small></span></a>
             <nav role="navigation" aria-label="Main Navigation">
                 <a href="index.html">Home</a>
                 <a href="index.html#about">About</a>
@@ -88,7 +83,7 @@
                         Smart plugs and meters powered by AI algorithms to analyze consumption 
                         and automatically reduce unnecessary energy waste, saving you money.
                     </p>
-                    <a href="#" class="card-link">Explore Savings →</a>
+                    <a href="#contact" class="card-link">Explore Savings →</a>
                 </div>
 
                 <div class="card division-card elevated-card">
@@ -98,7 +93,7 @@
                         Integrated smart locks, motion sensors, and camera feeds managed 
                         through a single app, providing secure remote access and instant alerts.
                     </p>
-                    <a href="#" class="card-link">View Security Suite →</a>
+                    <a href="#contact" class="card-link">View Security Suite →</a>
                 </div>
 
                 <div class="card division-card elevated-card">
@@ -108,7 +103,7 @@
                         Intelligent scheduling for ACs, geysers, and room heating based on 
                         real-time weather and occupancy, ensuring perfect comfort with minimal effort.
                     </p>
-                    <a href="#" class="card-link">Browse Controllers →</a>
+                    <a href="#contact" class="card-link">Browse Controllers →</a>
                 </div>
                 
                 <div class="card division-card elevated-card">
@@ -118,7 +113,7 @@
                         Automate lights based on sunrise/sunset, room occupancy, or time of day 
                         to create the perfect ambiance and conserve power.
                     </p>
-                    <a href="#" class="card-link">See Lighting Solutions →</a>
+                    <a href="#contact" class="card-link">See Lighting Solutions →</a>
                 </div>
                 
                 <div class="card division-card elevated-card">
@@ -128,7 +123,7 @@
                         Full compatibility with major voice platforms (Alexa, Google Assistant) 
                         plus seamless integration with the Vaani mobile app.
                     </p>
-                    <a href="#" class="card-link">Setup Voice Control →</a>
+                    <a href="#contact" class="card-link">Setup Voice Control →</a>
                 </div>
                 
                 <div class="card division-card elevated-card">
@@ -138,58 +133,47 @@
                         Manage every Vaani device, monitor energy use, and adjust settings 
                         from one intuitive and unified mobile application.
                     </p>
-                    <a href="#" class="card-link">Download App →</a>
+                    <a href="#contact" class="card-link">Download App →</a>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="how-it-works" class="products padded-section">
-        <div class="container text-center">
-            <h2 class="section-title">How the Vaani Ecosystem Works</h2>
-            <p class="subtitle">A simplified diagram of the device-to-cloud intelligence loop.</p>
-            
-            <div class="project-showcase" style="max-width: 900px; margin: 3rem auto;">
-                <div class="project-card diagram-flow-card" style="text-align: center;">
-
-                    <div class="flow-chart-wrapper">
-
-                        <div class="flow-step">
-                            <span class="step-icon">🔌</span>
-                            <h4>1. Device</h4>
-                            <p>Capture real-time data.</p>
-                        </div>
-                        <span class="flow-arrow">→</span>
-
-                        <div class="flow-step">
-                            <span class="step-icon">☁️</span>
-                            <h4>2. Cloud</h4>
-                            <p>Secure data transmission.</p>
-                        </div>
-                        <span class="flow-arrow">→</span>
-
-                        <div class="flow-step">
-                            <span class="step-icon">🧠</span>
-                            <h4>3. AI Engine</h4>
-                            <p>Execute logic/decision.</p>
-                        </div>
-                        <span class="flow-arrow">→</span>
-
-                        <div class="flow-step final-step">
-                            <span class="step-icon">✅</span>
-                            <h4>4. Action</h4>
-                            <p>Automate physical response.</p>
-                        </div>
-                    </div>
-                    <p style="margin-top: 2rem; color: #555; font-size: 0.95rem;">
-                        The Vaani hub processes sensor data locally and uses VSW's AI cloud to execute complex automated commands.
-                    </p>
+    <section id="how-it-works" class="products padded-section vaani-flow-section">
+        <div class="container">
+            <div class="vaani-flow-heading">
+                <p class="eyebrow eyebrow-dark">From signal to response</p>
+                <h2 class="section-title">How the Vaani Ecosystem Works</h2>
+                <p class="subtitle">A connected loop turns everyday signals into useful actions.</p>
+            </div>
+            <div class="vaani-flow-panel">
+                <div class="vaani-flow-track" role="list" aria-label="Vaani automation flow">
+                    <article class="vaani-flow-step" role="listitem">
+                        <span class="vaani-step-number">01</span>
+                        <span class="vaani-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 25.5 24 12l16 13.5V40H8V25.5Z"/><path d="M19 40V28h10v12M15 21h.1M33 21h.1"/><path d="M5 18 24 3l19 15"/></svg></span>
+                        <p class="vaani-step-label">01 / INPUT</p><h3>Devices sense</h3><p class="vaani-step-copy">Connected devices capture signals from your home.</p>
+                    </article>
+                    <article class="vaani-flow-step" role="listitem">
+                        <span class="vaani-step-number">02</span>
+                        <span class="vaani-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M13 35h22a8 8 0 0 0 .8-16A12 12 0 0 0 12 21a7 7 0 0 0 1 14Z"/><path d="M24 25v12m-5-5 5 5 5-5"/></svg></span>
+                        <p class="vaani-step-label">02 / CONNECT</p><h3>Data connects</h3><p class="vaani-step-copy">Signals are securely passed to the Vaani system.</p>
+                    </article>
+                    <article class="vaani-flow-step" role="listitem">
+                        <span class="vaani-step-number">03</span>
+                        <span class="vaani-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 5 28.2 9l5.8-.3 2.3 5.3 5.2 2.5-.5 5.8 3 5-3.5 4.7-.4 5.8-5.5 1.9-3 5-5.7-1-5.2 2.6-4.3-4-5.8.3-2.3-5.3-5.2-2.5.5-5.8-3-5 3.5-4.7.4-5.8 5.5-1.9 3-5 5.7 1L24 5Z"/><path d="m18 25 4 4 8-9"/></svg></span>
+                        <p class="vaani-step-label">03 / DECIDE</p><h3>Rules respond</h3><p class="vaani-step-copy">Automation logic determines the right response.</p>
+                    </article>
+                    <article class="vaani-flow-step vaani-flow-step-final" role="listitem">
+                        <span class="vaani-step-number">04</span>
+                        <span class="vaani-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 5v8m0 22v8M5 24h8m22 0h8M10.6 10.6l5.7 5.7m15.4 15.4 5.7 5.7m0-26.8-5.7 5.7m-15.4 15.4-5.7 5.7"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="3"/></svg></span>
+                        <p class="vaani-step-label">04 / OUTCOME</p><h3>Home responds</h3><p class="vaani-step-copy">A device carries out the requested action.</p>
+                    </article>
                 </div>
+                <div class="vaani-flow-note"><span class="vaani-note-mark" aria-hidden="true">i</span><p>The Vaani hub processes sensor data locally and can use VSW’s AI cloud for more complex automated commands.</p><span class="vaani-note-caption">SENSE <b>→</b> CONNECT <b>→</b> RESPOND</span></div>
             </div>
         </div>
     </section>
-
     <section id="final-cta" class="products padded-section" style="background: #00bcd4; color: white; padding: 4rem 1rem;">
         <div class="container text-center">
             <h2 class="section-title" style="color: white; border-bottom: none; margin-bottom: 0.5rem;">Ready for a smarter home?</h2>
@@ -214,8 +198,8 @@
                 <h3 class="footer-title">Quick Links</h3>
                 <ul>
                     <li><a href="index.html#services">Our Divisions</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#contact">Careers</a></li>
+                    <li><a href="#contact">Privacy Policy</a></li>
                     <li><a href="index.html#about">About VSW</a></li>
                 </ul>
             </div>
